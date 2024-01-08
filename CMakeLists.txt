@@ -32,7 +32,7 @@ file(GLOB_RECURSE SRC_MAIN
     "${SRC_DIR}/**.asm"
 )
 
-if (MSVC)
+if (CMAKE_TRY_COMPILE_CONFIGURATION)
   add_compile_options(/bigobj)
   add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
   add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
